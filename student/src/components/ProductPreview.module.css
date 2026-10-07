@@ -1,0 +1,222 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+
+  background: #ffffff;
+  border: 1px solid #dce5ef;
+  border-radius: 16px;
+  padding: 28px;
+
+  box-shadow: 0 18px 50px rgba(15, 45, 75, 0.1);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #0a66c2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.top h3 {
+  margin: 0 0 7px;
+  font-size: 19px;
+  color: #172033;
+}
+
+.top p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.match {
+  min-width: 62px;
+  height: 62px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #eaf3fc;
+  color: #0a66c2;
+}
+
+.match strong {
+  font-size: 17px;
+}
+
+.match span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.divider {
+  height: 1px;
+  background: #edf1f5;
+  margin: 24px 0;
+}
+
+.skillBlock {
+  margin-bottom: 20px;
+}
+
+.skillBlock p {
+  margin: 0 0 10px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skills,
+.missing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span,
+.missing span {
+  padding: 7px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.skills span {
+  background: #edf6ff;
+  color: #0a66c2;
+}
+
+.missing span {
+  background: #f4f6f8;
+  color: #64748b;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: 24px;
+}
+
+.bottom > span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.bottom button {
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 13px;
+
+  background: #0a66c2;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.floatingCard {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  z-index: 3;
+
+  width: 190px;
+  padding: 16px;
+
+  background: white;
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+
+  box-shadow: 0 12px 30px rgba(15, 45, 75, 0.12);
+}
+
+.floatingCard span,
+.floatingCard small {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.floatingCard strong {
+  display: block;
+  margin: 5px 0;
+
+  color: #172033;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 10px 0 30px;
+  }
+
+  .floatingCard {
+    right: 0;
+  }
+}
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.skillBlock p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skills span,
+.missing span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bottom button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.floatingCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.floatingIcon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+  background: #eaf3fc;
+  color: #0a66c2;
+}

@@ -1,0 +1,270 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f7faff;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  padding: 34px;
+  border: 1px solid #dce5ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(23, 32, 51, 0.05);
+}
+
+/* Header */
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.logoMark {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #0a66c2;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 8px 0 24px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Google */
+
+.googleButton {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #d5dce5;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.googleButton:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #bfc9d6;
+}
+
+.googleButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4285f4;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5eaf0;
+}
+
+.divider span {
+  flex-shrink: 0;
+}
+
+/* Form */
+
+.formGroup {
+  margin-bottom: 17px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 7px;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.formGroup input {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid #d5dfe9;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #172033;
+  font-size: 13px;
+}
+
+.formGroup input::placeholder {
+  color: #9aa7b6;
+}
+
+.formGroup input:focus {
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.08);
+}
+
+.formGroup input:disabled {
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+/* Password */
+
+.passwordLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.passwordLabel label {
+  margin-bottom: 7px;
+}
+
+.passwordLabel a {
+  margin-bottom: 7px;
+  color: #0a66c2;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.passwordLabel a:hover {
+  text-decoration: underline;
+}
+
+/* Error */
+
+.error {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #f0caca;
+  border-radius: 6px;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Submit */
+
+.submitButton {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 7px;
+  background: #0a66c2;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #085aa9;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Signup */
+
+.signupText {
+  margin: 20px 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.signupText a {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.signupText a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .page {
+    padding: 20px 14px;
+  }
+
+  .card {
+    padding: 27px 20px;
+  }
+}
+.resendButton {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  background: transparent;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.resendButton:hover {
+  background: #eff6ff;
+}
+
+.resendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

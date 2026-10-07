@@ -1,0 +1,57 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f7f9f8;
+}
+
+.card {
+  width: min(100%, 460px);
+  padding: 36px;
+  border: 1px solid #e3e8e5;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.card h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.card p {
+  margin: 0;
+  color: #66736d;
+  line-height: 1.6;
+}
+
+.card button {
+  margin-top: 22px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #23b26d;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 18px;
+  border: 3px solid #dfe9e4;
+  border-top-color: #23b26d;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

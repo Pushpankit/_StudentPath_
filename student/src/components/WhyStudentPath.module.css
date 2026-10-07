@@ -1,0 +1,89 @@
+.section {
+  padding: 110px 0;
+  background: #f5f8fc;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.label {
+  color: #0a66c2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.content h2 {
+  margin: 14px 0 22px;
+
+  color: #172033;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: -1px;
+}
+
+.content p {
+  max-width: 570px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+
+  padding: 12px 18px;
+  border-radius: 7px;
+
+  background: #0a66c2;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.points {
+  border-top: 1px solid #dce4ed;
+}
+
+.points > div {
+  padding: 24px 0;
+  border-bottom: 1px solid #dce4ed;
+}
+
+.points strong {
+  color: #0a66c2;
+  font-size: 12px;
+}
+
+.points h3 {
+  margin: 8px 0;
+  color: #172033;
+  font-size: 18px;
+}
+
+.points p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .content h2 {
+    font-size: 34px;
+  }
+}

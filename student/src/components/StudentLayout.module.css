@@ -1,0 +1,36 @@
+.layout {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f7f9fc;
+}
+
+.mainArea {
+  width: calc(100% - 248px);
+  min-height: 100vh;
+
+  margin-left: 248px;
+
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .mainArea {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .content {
+    padding-bottom: 84px;
+  }
+}

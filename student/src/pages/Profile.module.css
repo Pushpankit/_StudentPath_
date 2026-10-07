@@ -1,0 +1,978 @@
+.page {
+  min-height: 100%;
+  padding: 28px 36px 60px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.pageHeader {
+  max-width: 1028px;
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+
+  color: #0a66c2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.pageHeader h1 {
+  margin: 0;
+
+  color: #172033;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.editButton {
+  min-height: 42px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  background: #0a66c2;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.editButton:hover {
+  background: #0858a8;
+}
+
+.editButton:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.profileGrid {
+  max-width: 1028px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 322px;
+  gap: 20px;
+
+  align-items: start;
+}
+
+.mainColumn {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sideColumn {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  position: sticky;
+  top: 84px;
+}
+
+/* =========================
+   SHARED CARD
+========================= */
+
+.card,
+.identityCard,
+.strengthCard,
+.resumeCard,
+.tipCard {
+  background: #ffffff;
+  border: 1px solid #dfe6ed;
+  border-radius: 11px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   IDENTITY CARD
+========================= */
+
+.identityCard {
+  min-height: 124px;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9f4ff;
+  color: #0a66c2;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.identityInfo {
+  min-width: 0;
+  flex: 1;
+}
+
+.identityInfo h2 {
+  margin: 0;
+
+  color: #172033;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.identitySubtitle {
+  margin: 5px 0 8px;
+
+  color: #718096;
+  font-size: 12px;
+}
+
+.identityMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.identityMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #7b8794;
+
+  font-size: 11px;
+}
+
+.identityMeta svg {
+  color: #8c9aaa;
+}
+
+.roleBadge {
+  align-self: center;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: #edf6ff;
+  color: #0a66c2;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  padding: 22px 24px;
+}
+
+.sectionHeader {
+  min-height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin-bottom: 18px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.textAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #0a66c2;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.textAction:hover {
+  color: #0858a8;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.educationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 50px;
+  row-gap: 24px;
+}
+
+.infoField {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.infoField span {
+  color: #8a96a6;
+  font-size: 10px;
+}
+
+.infoField strong {
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+}
+
+.skillItem {
+  min-height: 38px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 0 12px;
+
+  border-radius: 6px;
+
+  background: #f7f9fb;
+}
+
+.skillItem strong {
+  color: #172033;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.skillItem span {
+  color: #8491a1;
+
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* =========================
+   PROJECTS & EXPERIENCE
+========================= */
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceItem {
+  display: flex;
+  gap: 12px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.experienceItem:first-child {
+  padding-top: 0;
+}
+
+.experienceItem:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.experienceIcon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #edf6ff;
+  color: #0a66c2;
+}
+
+.experienceContent {
+  min-width: 0;
+}
+
+.experienceContent h3 {
+  margin: 1px 0 5px;
+
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.experienceContent p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.technologyText {
+  margin-top: 8px;
+
+  color: #7c8998;
+
+  font-size: 10px;
+}
+
+.experienceDate {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #7c8998;
+
+  font-size: 10px;
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.certificationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 12px;
+
+  border: 1px solid #edf1f5;
+  border-radius: 7px;
+
+  background: #fbfcfd;
+}
+
+.certificationIcon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #edf6ff;
+  color: #0a66c2;
+}
+
+.certificationItem h3 {
+  margin: 1px 0 4px;
+
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.certificationItem p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 10px;
+}
+
+.certificationItem span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8a96a6;
+
+  font-size: 10px;
+}
+
+.emptyCertification {
+  padding-top: 1px;
+}
+
+.emptyCertification p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.emptyState {
+  padding: 4px 0;
+}
+
+.emptyState p {
+  margin: 0;
+
+  color: #7b8794;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.emptyState a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 10px;
+
+  color: #0a66c2;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================
+   PROFILE STRENGTH
+========================= */
+
+.strengthCard {
+  padding: 20px;
+}
+
+.strengthHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.strengthHeader span {
+  color: #172033;
+  font-size: 14px;
+}
+
+.strengthHeader strong {
+  color: #0a66c2;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.progressBar {
+  height: 6px;
+
+  margin-top: 16px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #e7edf3;
+}
+
+.progressBar span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #0a66c2;
+}
+
+.strengthCard > p {
+  margin: 14px 0 17px;
+
+  color: #7b8794;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.completionItems {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.completionItems div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #526173;
+
+  font-size: 11px;
+}
+
+.completed {
+  color: #0a66c2;
+}
+
+.incomplete {
+  color: #b4bec9;
+}
+
+/* =========================
+   RESUME
+========================= */
+
+.resumeCard {
+  padding: 20px;
+}
+
+.resumeIcon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 7px;
+
+  background: #edf6ff;
+  color: #0a66c2;
+}
+
+.resumeCard h3 {
+  margin: 0 0 7px;
+
+  color: #172033;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.resumeName {
+  margin: 0;
+
+  color: #7b8794;
+
+  font-size: 10px;
+
+  word-break: break-word;
+}
+
+.resumeEmpty {
+  margin: 0;
+
+  color: #7b8794;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.resumeAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 13px;
+
+  color: #0a66c2;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.resumeAction:hover {
+  color: #0858a8;
+}
+
+/* =========================
+   TIP CARD
+========================= */
+
+.tipCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 17px;
+
+  background: #f4f8fc;
+  border-color: #dce8f3;
+}
+
+.tipIcon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #e6f2ff;
+  color: #0a66c2;
+}
+
+.tipCard h3 {
+  margin: 1px 0 5px;
+
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tipCard p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.loadingState {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.loadingState p {
+  margin: 0;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+
+  border: 3px solid #dce5ef;
+  border-top-color: #0a66c2;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.errorState {
+  max-width: 600px;
+  margin: 80px auto;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 18px;
+
+  border: 1px solid #f0d4d4;
+  border-radius: 10px;
+
+  background: #fff8f8;
+}
+
+.errorIcon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #fff0f0;
+  color: #b42318;
+}
+
+.errorState h2 {
+  margin: 2px 0 5px;
+
+  color: #172033;
+
+  font-size: 14px;
+}
+
+.errorState p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .page {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .profileGrid {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+}
+
+/* =========================
+   MOBILE / SMALL TABLET
+========================= */
+
+@media (max-width: 850px) {
+  .pageHeader {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .editButton {
+    align-self: flex-start;
+  }
+
+  .profileGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sideColumn {
+    position: static;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tipCard {
+    grid-column: span 2;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .page {
+    padding: 20px 16px 40px;
+  }
+
+  .pageHeader {
+    margin-bottom: 20px;
+  }
+
+  .pageHeader h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .editButton {
+    width: 100%;
+  }
+
+  .identityCard {
+    padding: 18px;
+
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .identityInfo {
+    padding-top: 2px;
+  }
+
+  .roleBadge {
+    margin-left: 80px;
+    margin-top: -3px;
+  }
+
+  .educationGrid {
+    grid-template-columns: 1fr;
+    row-gap: 17px;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sideColumn {
+    display: flex;
+  }
+
+  .tipCard {
+    grid-column: auto;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
+  .page {
+    padding: 16px 12px 35px;
+  }
+
+  .pageHeader h1 {
+    font-size: 24px;
+  }
+
+  .identityCard {
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
+  }
+
+  .identityInfo h2 {
+    font-size: 17px;
+  }
+
+  .identityMeta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .roleBadge {
+    margin-left: 66px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 16px;
+  }
+
+  .textAction {
+    font-size: 11px;
+  }
+}

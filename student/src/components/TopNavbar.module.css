@@ -1,0 +1,740 @@
+/* =========================================
+   TOP NAVBAR
+   ========================================= */
+
+.navbar {
+  height: 76px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e7ebf2;
+
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 90;
+}
+
+
+/* =========================================
+   LEFT
+   ========================================= */
+
+.left {
+  min-width: 0;
+}
+
+.pageTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+}
+
+.pageTitle p {
+  margin: 3px 0 0;
+
+  color: #8a94a6;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   RIGHT
+   ========================================= */
+
+.right {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* =========================================
+   NOTIFICATION WRAPPER
+   ========================================= */
+
+.notificationWrapper {
+  position: relative;
+}
+
+
+/* =========================================
+   NOTIFICATION BUTTON
+   ========================================= */
+
+.notificationButton {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5eaf1;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #647084;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.notificationButton:hover {
+  background: #f4f8ff;
+
+  border-color: #d5e2f7;
+
+  color: #2563eb;
+}
+
+.notificationButton:active {
+  transform: scale(0.97);
+}
+
+.notificationButtonActive {
+  background: #eff6ff;
+
+  border-color: #bfdbfe;
+
+  color: #2563eb;
+}
+
+
+/* =========================================
+   NOTIFICATION DOT
+   ========================================= */
+
+.notificationBadge {
+  position: absolute;
+
+  top: -5px;
+  right: -5px;
+
+  min-width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  background: #eb2525;
+
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   NOTIFICATION POPUP
+   ========================================= */
+
+.notificationPopup {
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  right: 0;
+
+  width: 360px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8f0;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 14px 40px rgba(15, 23, 42, 0.12),
+    0 3px 10px rgba(15, 23, 42, 0.05);
+
+  overflow: hidden;
+
+  animation: notificationOpen 0.16s ease-out;
+}
+
+@keyframes notificationOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   NOTIFICATION HEADER
+   ========================================= */
+
+.notificationHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 16px 16px 14px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.notificationHeader h3 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.notificationHeader span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8a94a6;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.closeButton {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #8a94a6;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.closeButton:hover {
+  background: #f3f5f8;
+
+  color: #374151;
+}
+
+
+/* =========================================
+   NOTIFICATION LIST
+   ========================================= */
+
+.notificationList {
+  max-height: 330px;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   NOTIFICATION ITEM
+   ========================================= */
+
+.notificationItem {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 13px 16px;
+
+  border: 0;
+
+  border-bottom: 1px solid #f0f2f6;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.15s ease;
+}
+
+.notificationItem:hover {
+  background: #f8fafc;
+}
+
+.notificationItem:last-child {
+  border-bottom: 0;
+}
+
+.notificationItem.unread {
+  background: #f8fbff;
+}
+
+.notificationItem.unread:hover {
+  background: #f1f7ff;
+}
+
+
+/* =========================================
+   NOTIFICATION ICON
+   ========================================= */
+
+.notificationIcon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+}
+
+
+/* Success */
+
+.notificationIconsuccess {
+  background: #ecfdf3;
+
+  color: #16a34a;
+}
+
+
+/* Job */
+
+.notificationIconjob {
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+
+/* Info */
+
+.notificationIconinfo {
+  background: #f3f4f6;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   NOTIFICATION CONTENT
+   ========================================= */
+
+.notificationContent {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.notificationTitleRow {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.notificationTitleRow strong {
+  color: #1f2937;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  line-height: 1.4;
+}
+
+.notificationContent p {
+  margin: 3px 0 0;
+
+  color: #667085;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.notificationTime {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9aa3b2;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   UNREAD INDICATOR
+   ========================================= */
+
+.unreadIndicator {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+}
+
+
+/* =========================================
+   EMPTY STATE
+   ========================================= */
+
+.emptyNotifications {
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #a0a8b5;
+}
+
+.emptyNotifications p {
+  margin: 0;
+
+  color: #7b8494;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.notificationFooter {
+  padding: 10px 16px;
+
+  border-top: 1px solid #edf0f5;
+
+  background: #fbfcfe;
+
+  text-align: center;
+}
+
+.notificationFooter button {
+  border: 0;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.notificationFooter button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   PROFILE
+   ========================================= */
+
+.profile {
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 4px 7px 4px 5px;
+
+  border: 1px solid transparent;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.profile:hover {
+  background: #f6f8fb;
+
+  border-color: #e8edf4;
+}
+
+
+/* =========================================
+   AVATAR
+   ========================================= */
+
+.avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   USER INFORMATION
+   ========================================= */
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  min-width: 80px;
+
+  max-width: 150px;
+}
+
+.name {
+  color: #202938;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  line-height: 1.3;
+
+  max-width: 150px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.role {
+  margin-top: 2px;
+
+  color: #8a94a6;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================
+   CHEVRON
+   ========================================= */
+
+.chevron {
+  color: #8a94a6;
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.profile:hover .chevron {
+  color: #2563eb;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .pageTitle p {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+
+    padding: 0 15px;
+  }
+
+  .pageTitle h1 {
+    font-size: 18px;
+  }
+
+  .right {
+    gap: 8px;
+  }
+
+  .notificationButton {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+  }
+
+  .notificationPopup {
+    position: fixed;
+
+    top: 69px;
+
+    left: 12px;
+    right: 12px;
+
+    width: auto;
+
+    max-width: none;
+
+    border-radius: 14px;
+  }
+
+  .profile {
+    min-height: 40px;
+
+    padding: 2px;
+
+    border: none;
+  }
+
+  .profile:hover {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .userInfo,
+  .chevron {
+    display: none;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .pageTitle h1 {
+    font-size: 17px;
+  }
+
+  .notificationButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .notificationPopup {
+    left: 8px;
+    right: 8px;
+  }
+}

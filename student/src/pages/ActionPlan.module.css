@@ -1,0 +1,1304 @@
+.page {
+  min-height: 100vh;
+  background: #f7f9f8;
+  color: #17211d;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  background: #103d2b;
+  color: #ffffff;
+  border-radius: 13px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  right: -150px;
+  top: -260px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  right: 40px;
+  bottom: -270px;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  min-height: 240px;
+  margin: 0 auto;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 70px;
+  align-items: center;
+}
+
+.heroLeft {
+  max-width: 720px;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  color: #8ce5b9;
+}
+
+.heroLeft h1 {
+  margin: 0;
+  max-width: 720px;
+  font-size: clamp(36px, 4vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+  font-weight: 750;
+}
+
+.heroLeft h1 span {
+  color: #7de1ae;
+}
+
+.heroDescription {
+  max-width: 620px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 15px;
+  /* line-height: 1.75; */
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.heroMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+.heroMetaItem svg {
+  color: #7de1ae;
+}
+
+.heroProgress {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(5px);
+}
+
+.progressCircle {
+  position: relative;
+  flex: 0 0 126px;
+  width: 126px;
+  height: 126px;
+}
+
+.progressSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progressCircleTrack,
+.progressCircleValue {
+  fill: none;
+  stroke-width: 7;
+}
+
+.progressCircleTrack {
+  stroke: rgba(255, 255, 255, 0.12);
+}
+
+.progressCircleValue {
+  stroke: #76dfa9;
+  stroke-linecap: round;
+  stroke-dasharray: 326.73;
+  transition: stroke-dashoffset 0.45s ease;
+}
+
+.progressCircleText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressCircleText strong {
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 750;
+}
+
+.progressCircleText span {
+  margin-top: 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.heroProgressInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progressLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #83e2b2;
+}
+
+.heroProgressInfo strong {
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.heroProgressInfo > span:last-child {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.statsSection {
+  background: #ffffff;
+  border-bottom: 1px solid #e7ece9;
+}
+
+.statsGrid {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.statCard {
+  min-height: 98px;
+  padding: 19px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #e6ebe8;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.statIcon {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+}
+
+.statIconGreen {
+  background: #e8f8ef;
+  color: #1c9a5d;
+}
+
+.statIconBlue {
+  background: #eaf3fb;
+  color: #3478b9;
+}
+
+.statIconOrange {
+  background: #fff4e7;
+  color: #d78222;
+}
+
+.statIconPurple {
+  background: #f2edfa;
+  color: #8059a9;
+}
+
+.statCard > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.statCard span {
+  color: #77817d;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.statCard strong {
+  margin-top: 3px;
+  color: #17211d;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.statCard small {
+  margin-top: 2px;
+  color: #99a19e;
+  font-size: 11px;
+}
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.roadmapSection,
+.contentSection {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.roadmapSection {
+  padding-top: 54px;
+  padding-bottom: 50px;
+}
+
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.sectionEyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: #2a9a62;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  color: #18221e;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+}
+
+.sectionHeading p {
+  margin: 8px 0 0;
+  color: #7b8581;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================
+   ROADMAP
+========================= */
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 4px 0 0;
+}
+
+.roadmapItem {
+  position: relative;
+  min-width: 0;
+  padding-right: 20px;
+}
+
+.roadmapNode {
+  position: relative;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #dce4df;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #89938e;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.roadmapCompleted .roadmapNode {
+  border-color: #23975c;
+  background: #23975c;
+  color: #ffffff;
+}
+
+.roadmapCurrent .roadmapNode {
+  border-color: #23975c;
+  box-shadow: 0 0 0 5px rgba(35, 151, 92, 0.09);
+  color: #23975c;
+}
+
+.roadmapLine {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  left: 38px;
+  right: 0;
+  height: 2px;
+  background: #e1e8e4;
+}
+
+.roadmapCompleted .roadmapLine {
+  background: #6fc293;
+}
+
+.roadmapItem:last-child .roadmapLine {
+  display: none;
+}
+
+.roadmapContent {
+  padding-top: 18px;
+}
+
+.roadmapIcon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #eef7f2;
+  color: #2a9a62;
+}
+
+.roadmapType {
+  color: #87918c;
+  font-size: 9px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.roadmapContent h3 {
+  margin: 5px 0 0;
+  color: #26312c;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.roadmapContent p {
+  margin: 7px 0 0;
+  color: #8a9390;
+  font-size: 11px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.noSteps {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed #d8e0dc;
+  border-radius: 14px;
+  color: #8b9591;
+  background: #ffffff;
+}
+
+.noSteps p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.contentSection {
+  padding-bottom: 70px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 28px;
+  align-items: start;
+}
+
+.tasksColumn {
+  min-width: 0;
+}
+
+.taskCount {
+  min-width: 45px;
+  height: 32px;
+  padding: 0 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfe7e2;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #328e5d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.taskCard {
+  display: flex;
+  gap: 17px;
+  padding: 20px;
+  border: 1px solid #e2e9e5;
+  border-radius: 14px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.taskCard:hover {
+  border-color: #cbdad1;
+  box-shadow: 0 7px 24px rgba(25, 60, 43, 0.05);
+  transform: translateY(-1px);
+}
+
+.taskCompleted {
+  background: #fbfdfc;
+}
+
+.taskCheck {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  padding: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #b2bcb7;
+  cursor: pointer;
+}
+
+.taskCheck:hover {
+  color: #27945c;
+}
+
+.taskCompleted .taskCheck {
+  background: #27945c;
+  color: #ffffff;
+}
+
+.taskBody {
+  min-width: 0;
+  flex: 1;
+}
+
+.taskTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.taskType {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #6d7973;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.taskTypeIcon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #edf7f1;
+  color: #2a9a62;
+}
+
+.priority {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.priorityHigh {
+  background: #fff0ed;
+  color: #c9604c;
+}
+
+.priorityMedium {
+  background: #fff7e8;
+  color: #c58a31;
+}
+
+.priorityLow {
+  background: #edf6f1;
+  color: #3d8b61;
+}
+
+.taskBody h3 {
+  margin: 11px 0 0;
+  color: #26312c;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.completedTitle {
+  color: #84908a !important;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.taskDescription {
+  max-width: 720px;
+  margin: 7px 0 0;
+  color: #77817c;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.actionBox {
+  margin-top: 13px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  background: #f6faf7;
+  color: #66736d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.actionBox svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #4ca575;
+}
+
+.taskFooter {
+  margin-top: 17px;
+  padding-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #edf1ef;
+}
+
+.taskMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.taskMeta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #8a9490;
+  font-size: 10px;
+}
+
+.taskMeta svg {
+  color: #7a8982;
+}
+
+.taskAction {
+  padding: 7px 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #d9e5de;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #278b57;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.taskAction:hover {
+  background: #f2f9f5;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sideCard {
+  padding: 20px;
+  border: 1px solid #e1e8e4;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.sideCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.sideCardIcon {
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #edf7f1;
+  color: #29935d;
+}
+
+.sideCardHeader > div:last-child {
+  min-width: 0;
+}
+
+.sideCardHeader span {
+  display: block;
+  color: #89938e;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+.sideCardHeader h3 {
+  margin: 3px 0 0;
+  color: #25312b;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.skillSummary {
+  margin: 20px 0;
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #edf1ef;
+  border-bottom: 1px solid #edf1ef;
+}
+
+.skillSummary > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillSummary > div + div {
+  padding-left: 18px;
+  border-left: 1px solid #edf1ef;
+}
+
+.skillSummary strong {
+  color: #26332d;
+  font-size: 21px;
+}
+
+.skillSummary span {
+  margin-top: 2px;
+  color: #89938e;
+  font-size: 10px;
+}
+
+.skillGroup + .skillGroup {
+  margin-top: 16px;
+}
+
+.skillGroupTitle {
+  display: block;
+  margin-bottom: 8px;
+  color: #7b8580;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.missingSkill,
+.matchedSkill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.missingSkill {
+  background: #fff3ef;
+  color: #b9614f;
+}
+
+.matchedSkill {
+  background: #edf8f1;
+  color: #3a895d;
+}
+
+.sideButton {
+  width: 100%;
+  margin-top: 18px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #d9e5de;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #278b57;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sideButton:hover {
+  background: #f2f9f5;
+}
+
+.careerDescription,
+.sideDescription {
+  margin: 17px 0 0;
+  color: #7d8882;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.jobCount {
+  margin-top: 15px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #f5f9f6;
+}
+
+.jobCount strong {
+  color: #298c58;
+  font-size: 18px;
+}
+
+.jobCount span {
+  color: #7b8580;
+  font-size: 10px;
+}
+
+/* =========================
+   BUTTONS / STATES
+========================= */
+
+.primaryButton {
+  min-height: 40px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 8px;
+  background: #23945b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background: #1c814e;
+}
+
+.loadingState,
+.errorState,
+.emptyState {
+  min-height: 70vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loadingState {
+  gap: 12px;
+  color: #75827b;
+}
+
+.loadingState p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.loadingIcon {
+  color: #26915a;
+  animation: spin 1s linear infinite;
+}
+
+.errorState h1,
+.emptyState h1 {
+  margin: 16px 0 7px;
+  color: #25312b;
+  font-size: 22px;
+}
+
+.errorState p,
+.emptyState p {
+  max-width: 430px;
+  margin: 0 0 20px;
+  color: #7d8782;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.errorIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff0ed;
+  color: #c75e4c;
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.emptyState {
+  color: #7e8983;
+}
+
+.emptyState > svg {
+  color: #29945d;
+}
+
+.globalError {
+  position: fixed;
+  z-index: 100;
+  top: 18px;
+  left: 50%;
+  width: min(500px, calc(100% - 30px));
+  padding: 11px 14px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #efcbc3;
+  border-radius: 9px;
+  background: #fff7f5;
+  color: #a34e40;
+  box-shadow: 0 10px 30px rgba(20, 30, 25, 0.1);
+  font-size: 11px;
+}
+
+.globalError button {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .heroInner {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 35px;
+  }
+
+  .heroProgress {
+    padding: 19px;
+  }
+
+  .progressCircle {
+    flex-basis: 105px;
+    width: 105px;
+    height: 105px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contentGrid {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+
+  .roadmapContent h3 {
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .heroInner {
+    min-height: auto;
+    padding: 42px 20px 38px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .heroLeft h1 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .heroDescription {
+    font-size: 13px;
+  }
+
+  .heroProgress {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .statsGrid {
+    padding: 17px 20px;
+    gap: 9px;
+  }
+
+  .statCard {
+    min-height: 84px;
+    padding: 14px;
+    gap: 11px;
+  }
+
+  .statIcon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .statCard strong {
+    font-size: 19px;
+  }
+
+  .roadmapSection,
+  .contentSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .roadmapSection {
+    padding-top: 38px;
+    padding-bottom: 36px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 23px;
+  }
+
+  .roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-left: 4px;
+  }
+
+  .roadmapItem {
+    min-height: 105px;
+    padding: 0 0 20px 54px;
+  }
+
+  .roadmapNode {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .roadmapLine {
+    top: 38px;
+    left: 17px;
+    right: auto;
+    width: 2px;
+    height: calc(100% - 20px);
+  }
+
+  .roadmapItem:last-child .roadmapLine {
+    display: block;
+  }
+
+  .roadmapItem:last-child {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .roadmapItem:last-child .roadmapLine {
+    display: none;
+  }
+
+  .roadmapContent {
+    padding-top: 0;
+  }
+
+  .roadmapIcon {
+    display: none;
+  }
+
+  .roadmapType {
+    font-size: 9px;
+  }
+
+  .roadmapContent h3 {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .roadmapContent p {
+    font-size: 11px;
+  }
+
+  .contentSection {
+    padding-bottom: 50px;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+
+  .taskCard {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .taskTop {
+    align-items: flex-start;
+  }
+
+  .taskFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .taskAction {
+    align-self: flex-start;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .heroInner {
+    padding: 35px 16px 32px;
+  }
+
+  .heroEyebrow {
+    font-size: 9px;
+  }
+
+  .heroLeft h1 {
+    font-size: 30px;
+  }
+
+  .heroDescription {
+    margin-top: 17px;
+    font-size: 12px;
+  }
+
+  .heroMeta {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .heroProgress {
+    padding: 17px;
+    gap: 15px;
+  }
+
+  .progressCircle {
+    flex-basis: 92px;
+    width: 92px;
+    height: 92px;
+  }
+
+  .progressCircleText strong {
+    font-size: 22px;
+  }
+
+  .progressCircleText span {
+    font-size: 8px;
+  }
+
+  .heroProgressInfo strong {
+    font-size: 15px;
+  }
+
+  .statsGrid {
+    padding: 13px 16px;
+  }
+
+  .statCard {
+    min-height: 76px;
+    padding: 11px;
+  }
+
+  .statIcon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .statCard span {
+    font-size: 8px;
+  }
+
+  .statCard strong {
+    font-size: 17px;
+  }
+
+  .statCard small {
+    font-size: 9px;
+  }
+
+  .roadmapSection,
+  .contentSection {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .sectionHeading {
+    align-items: flex-start;
+  }
+
+  .sectionHeading h2 {
+    font-size: 21px;
+  }
+
+  .sectionHeading p {
+    font-size: 11px;
+  }
+
+  .taskCard {
+    padding: 14px;
+  }
+
+  .taskBody h3 {
+    font-size: 14px;
+  }
+
+  .taskDescription {
+    font-size: 11px;
+  }
+
+  .taskMeta {
+    gap: 9px;
+  }
+
+  .taskMeta span {
+    font-size: 9px;
+  }
+
+  .priority {
+    font-size: 8px;
+  }
+
+  .sideCard {
+    padding: 17px;
+  }
+}

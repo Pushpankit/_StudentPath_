@@ -1,0 +1,5 @@
+.page { min-height: 100vh; display: grid; place-content: center; gap: 10px; padding: 24px; text-align: center; background: #f8fafc; color: #111827; }
+.page p { margin: 0; color: #2563eb; font-weight: 800; font-size: 14px; letter-spacing: .12em; }
+.page h1 { margin: 0; font-size: 36px; }
+.page span { color: #64748b; }
+.page button { justify-self: center; margin-top: 10px; border: 0; border-radius: 8px; background: #2563eb; color: #fff; padding: 10px 16px; cursor: pointer; }

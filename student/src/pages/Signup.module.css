@@ -1,0 +1,325 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f7faff;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  padding: 34px;
+  border: 1px solid #dce5ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(23, 32, 51, 0.05);
+}
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.logoMark {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #0a66c2;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 8px 0 22px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Account type */
+
+.accountType {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px;
+  margin-bottom: 18px;
+  border: 1px solid #dce5ef;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.accountTypeButton,
+.accountTypeActive {
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.15s ease;
+}
+
+.accountTypeButton {
+  background: transparent;
+  color: #64748b;
+}
+
+.accountTypeButton:hover:not(:disabled) {
+  color: #172033;
+  background: #ffffff;
+}
+
+.accountTypeActive {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.accountTypeButton:disabled,
+.accountTypeActive:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Google */
+
+.googleButton {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #d5dce5;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.googleButton:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #bfc9d6;
+}
+
+.googleButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4285f4;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5eaf0;
+}
+
+.divider span {
+  flex-shrink: 0;
+}
+
+/* Form */
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 7px;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.formGroup input {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid #d5dfe9;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #172033;
+  font-size: 13px;
+}
+
+.formGroup input::placeholder {
+  color: #9aa7b6;
+}
+
+.formGroup input:focus {
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.08);
+}
+
+.formGroup input:disabled {
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+.inputHint {
+  display: block;
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* Terms */
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 4px 0 16px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.terms input {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin: 1px 0 0;
+  accent-color: #0a66c2;
+  cursor: pointer;
+}
+
+.terms span {
+  flex: 1;
+}
+
+.terms a {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Error */
+
+.error {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #f0caca;
+  border-radius: 6px;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Submit */
+
+.submitButton {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 7px;
+  background: #0a66c2;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #085aa9;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Login */
+
+.loginText {
+  margin: 20px 0 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.loginText a {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.loginText a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .page {
+    padding: 20px 14px;
+  }
+
+  .card {
+    padding: 27px 20px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+}
+.success {
+  margin: 20px 0;
+  padding: 12px 14px;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 14px;
+  line-height: 1.5;
+}
